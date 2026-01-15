@@ -53,7 +53,7 @@ export function Projects() {
           {projects.map((project, index) => (
             <Card
               key={index}
-              className="group overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+              className="group overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1 pt-0"
             >
               <div className="h-2 bg-linear-to-r from-purple-500 to-blue-500" />
               <CardHeader>
@@ -75,7 +75,9 @@ export function Projects() {
                 </div>
               </CardHeader>
               <CardContent className="space-y-6">
-                <p className="text-muted-foreground">{project.description}</p>
+                <p className="text-muted-foreground text-justify md:text-left">
+                  {project.description}
+                </p>
 
                 <div className="grid grid-cols-2 gap-2">
                   {project.highlights.map((h) => (

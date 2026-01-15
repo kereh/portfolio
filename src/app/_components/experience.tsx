@@ -8,7 +8,7 @@ const workExperience = [
     title: "Web Developer Intern",
     company: "KPU Kota Tomohon",
     location: "Sulawesi Utara",
-    period: "Oct 2025 – Dec 2025",
+    period: "Oct 2025 - Dec 2025",
     description: [
       "Developed comprehensive employee performance website system, including performance management, online attendance, and allowance calculation modules",
       "Designed and implemented monthly/yearly performance and attendance reports for streamlined evaluation",
@@ -20,7 +20,7 @@ const workExperience = [
     title: "Part-Time Developer",
     company: "SMK Dharma Bhakti Tomohon",
     location: "Sulawesi Utara",
-    period: "Apr 2025 – Jun 2025",
+    period: "Apr 2025 - Jun 2025",
     description: [
       "Developed and implemented school profile website to enhance public image and information access",
       "Collaborated with school stakeholders to translate content requirements into functional and aesthetic web solutions",
