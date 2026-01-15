@@ -36,30 +36,28 @@ export function Contact() {
           </p>
         </div>
 
-        <div className="grid">
-          <div className="space-y-6">
-            <h3 className="text-lg font-semibold">Contact Information</h3>
-            <div className="space-y-4">
-              {contactInfo.map((info) => (
-                <a
-                  key={info.label}
-                  href={info.href}
-                  className="flex items-center gap-4 p-4 rounded-lg bg-muted/50 hover:bg-muted transition-colors group"
-                >
-                  <div className="h-10 w-10 rounded-full bg-linear-to-r from-purple-500 to-blue-500 flex items-center justify-center">
-                    <info.icon className="h-5 w-5 text-white" />
-                  </div>
-                  <div>
-                    <p className="text-sm text-muted-foreground">
-                      {info.label}
-                    </p>
-                    <p className="font-medium group-hover:text-purple-500 transition-colors">
-                      {info.value}
-                    </p>
-                  </div>
-                </a>
-              ))}
-            </div>
+        <div className="space-y-6">
+          <h3 className="text-lg font-semibold text-center">
+            Contact Information
+          </h3>
+          <div className="grid sm:grid-cols-3 gap-4">
+            {contactInfo.map((info) => (
+              <a
+                key={info.label}
+                href={info.href}
+                className="flex flex-col items-center gap-3 p-6 rounded-xl bg-muted/50 hover:bg-muted transition-colors group text-center"
+              >
+                <div className="h-12 w-12 rounded-full bg-linear-to-r from-purple-500 to-blue-500 flex items-center justify-center">
+                  <info.icon className="h-5 w-5 text-white" />
+                </div>
+                <div>
+                  <p className="text-sm text-muted-foreground">{info.label}</p>
+                  <p className="font-medium group-hover:text-purple-500 transition-colors text-sm">
+                    {info.value}
+                  </p>
+                </div>
+              </a>
+            ))}
           </div>
         </div>
       </div>
