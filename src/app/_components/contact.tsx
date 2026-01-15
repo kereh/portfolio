@@ -38,7 +38,7 @@ export function Contact() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid">
           <div className="space-y-6">
             <h3 className="text-lg font-semibold">Contact Information</h3>
             <div className="space-y-4">
