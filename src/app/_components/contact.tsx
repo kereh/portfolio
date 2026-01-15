@@ -63,53 +63,6 @@ export function Contact() {
               ))}
             </div>
           </div>
-
-          <Card className="border-0 shadow-lg">
-            <CardContent className="p-6">
-              <form className="space-y-4">
-                <div className="space-y-2">
-                  <label htmlFor="name" className="text-sm font-medium">
-                    Name
-                  </label>
-                  <input
-                    id="name"
-                    type="text"
-                    placeholder="Your name"
-                    className="w-full px-4 py-2 rounded-lg border border-input bg-background focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all"
-                  />
-                </div>
-                <div className="space-y-2">
-                  <label htmlFor="email" className="text-sm font-medium">
-                    Email
-                  </label>
-                  <input
-                    id="email"
-                    type="email"
-                    placeholder="your@email.com"
-                    className="w-full px-4 py-2 rounded-lg border border-input bg-background focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all"
-                  />
-                </div>
-                <div className="space-y-2">
-                  <label htmlFor="message" className="text-sm font-medium">
-                    Message
-                  </label>
-                  <textarea
-                    id="message"
-                    rows={4}
-                    placeholder="Your message..."
-                    className="w-full px-4 py-2 rounded-lg border border-input bg-background resize-none focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all"
-                  />
-                </div>
-                <Button
-                  type="submit"
-                  className="w-full bg-linear-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white"
-                >
-                  <Send className="mr-2 h-4 w-4" />
-                  Send Message
-                </Button>
-              </form>
-            </CardContent>
-          </Card>
         </div>
       </div>
     </section>
