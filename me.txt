@@ -1,0 +1,41 @@
+DIAN RONALDO KEREH
+Full-Stack Web Developer
+Tomohon, Indonesia | dianronaldokereh@gmail.com | +62 896 1222 5233
+
+RINGKASAN PROFESIONAL
+Self-taught developer sejak 2018 dengan keahlian dalam membangun aplikasi web modern menggunakan Next.js, TypeScript, dan CI/CD workflows. Berpengalaman mengembangkan sistem production untuk instansi pemerintah dan pendidikan. Cepat belajar teknologi baru dan fokus pada solusi yang efisien sesuai kebutuhan bisnis.
+
+PENGALAMAN
+
+Internship - Web Developer
+KPU Kota Tomohon, Sulawesi Utara
+Oktober 2025 – Desember 2025
+- Mengembangkan sistem website kinerja pegawai secara menyeluruh, mencakup modul manajemen kinerja, absensi online, dan perhitungan potongan Tunjangan Kinerja (Tukin).
+- Merancang dan mengimplementasikan fitur rekapan kinerja dan absensi bulanan/tahunan untuk mempermudah proses pelaporan dan evaluasi pegawai.
+- Memastikan fungsionalitas dan akurasi data sistem untuk mendukung transparansi dan efisiensi administrasi kepegawaian.
+
+Part-Time Developer
+SMK Dharma Bhakti Tomohon, Sulawesi Utara
+April 2025 – Juni 2025
+- Bertanggung jawab dalam pengembangan dan implementasi website profil sekolah untuk meningkatkan citra dan akses informasi publik.
+- Bekerja sama dengan pihak sekolah untuk menerjemahkan kebutuhan konten dan fitur menjadi solusi web yang fungsional dan estetis.
+
+EDUKASI
+
+Perguruan Tinggi
+Universitas Sariputra Indonesia Tomohon, Sulawesi Utara
+Lulus: 2026
+- Gelar: Sarjana (S-1)
+- Jurusan: Informatika
+
+Sekolah Menengah Kejuruan
+SMKS Kristen 2 Tomohon, Sulawesi Utara
+Lulus: 2022
+- Jurusan: Teknik Komputer dan Jaringan (TKJ)
+
+SKILLS
+- Web Development: Next.js, TypeScript, tRPC, Better-Auth
+- Database & ORM: PostgreSQL, Drizzle ORM, Prisma ORM
+- DevOps & CI/CD: Github Actions, Git
+- Infrastruktur & Arsitektur: Konfigurasi VPS, Manajemen Domain, Microservice
+- Framework Lain: Laravel
