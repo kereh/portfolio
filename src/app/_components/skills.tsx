@@ -1,3 +1,5 @@
+// biome-ignore-all lint/suspicious/noArrayIndexKey: ayolah biome key doank
+
 import { Badge } from "@/components/ui/badge";
 
 const skillCategories = [
@@ -41,7 +43,6 @@ export function Skills() {
 
         <div className="grid gap-8">
           {skillCategories.map((cat, index) => (
-            // biome-ignore lint/suspicious/noArrayIndexKey: ayolah biome key doank
             <div key={index} className="space-y-4">
               <div className="flex items-center gap-3">
                 <div

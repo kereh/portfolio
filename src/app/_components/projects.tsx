@@ -18,6 +18,8 @@ const projects = [
       "Automated allowance calculation",
       "Report generation",
     ],
+    external_link: "https://ekinerja.e-office.site",
+    github_link: "/",
   },
   {
     title: "School Profile Website",
@@ -31,6 +33,8 @@ const projects = [
       "SEO optimized",
       "Fast performance",
     ],
+    external_link: "#",
+    github_link: "https://github.com/kereh/",
   },
 ];
 

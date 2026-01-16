@@ -7,7 +7,7 @@ import { Hero } from "./_components/hero";
 import { Projects } from "./_components/projects";
 import { Skills } from "./_components/skills";
 
-export default function Page() {
+export default function page() {
   return (
     <div className="min-h-screen bg-background font-sans">
       <Header />
