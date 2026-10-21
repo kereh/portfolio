@@ -1,111 +1,134 @@
-/** biome-ignore-all lint/suspicious/noArrayIndexKey: biome */
-
-import { ExternalLink, Github } from "lucide-react";
+import { ArrowUpRight, Github, Globe } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const projects = [
   {
-    title: "Employee Performance System",
+    title: "e-Kinerja (Employee Performance System)",
+    client: "KPU Kota Tomohon · Government",
     description:
-      "Comprehensive web-based system for managing employee performance, online attendance tracking, and calculating performance allowances (Tukin). Features monthly/yearly reports for streamlined HR evaluation.",
+      "Production web platform for civil service evaluation, real-time employee attendance tracking, and automated performance allowance (Tukin) calculations with audit-ready reporting.",
     tech: ["Next.js", "TypeScript", "PostgreSQL", "Drizzle ORM", "Better-Auth"],
-    type: "Government",
     highlights: [
-      "Performance management module",
-      "Online attendance system",
+      "Performance evaluation engine",
+      "Online attendance logging",
       "Automated allowance calculation",
-      "Report generation",
+      "Monthly & annual report export",
     ],
-    external_link: "https://ekinerja.e-office.site",
-    github_link: "/",
+    externalLink: "https://ekinerja.e-office.site",
+    githubLink: null,
   },
   {
-    title: "School Profile Website",
+    title: "School Profile & Portal",
+    client: "SMK Dharma Bhakti Tomohon · Education",
     description:
-      "Modern, responsive school profile website designed to enhance the institution's public image and provide accessible information to students, parents, and the community.",
+      "Institutional web application providing accessible program directories, student registration guidelines, and administrative announcements for school community members.",
     tech: ["Next.js", "TypeScript", "Tailwind CSS"],
-    type: "Education",
     highlights: [
-      "Responsive design",
-      "Content management",
-      "SEO optimized",
-      "Fast performance",
+      "Responsive accessibility",
+      "Structured curriculum directory",
+      "SEO & metadata optimization",
+      "Lightweight fast delivery",
     ],
-    external_link: "#",
-    github_link: "https://github.com/kereh/",
+    externalLink: null,
+    githubLink: "https://github.com/kereh",
   },
 ];
 
 export function Projects() {
   return (
-    <section id="projects" className="py-24 px-6">
-      <div className="max-w-4xl mx-auto space-y-12">
-        <div className="text-center space-y-2">
-          <p className="text-sm font-medium text-purple-500 tracking-widest uppercase">
-            Featured Work
-          </p>
-          <h2 className="text-3xl sm:text-4xl font-bold">My Projects</h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
-            Production systems built for real-world use in government and
-            education sectors
-          </p>
-        </div>
+    <section id="projects" className="space-y-6">
+      <div className="space-y-1">
+        <p className="font-mono text-xs text-muted-foreground uppercase tracking-wider">
+          03 / Projects
+        </p>
+        <h2 className="text-xl sm:text-2xl font-bold tracking-tight text-foreground">
+          Selected Work
+        </h2>
+      </div>
 
-        <div className="grid gap-8">
-          {projects.map((project, index) => (
-            <Card
-              key={index}
-              className="group overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1 pt-0"
-            >
-              <div className="h-2 bg-linear-to-r from-purple-500 to-blue-500" />
-              <CardHeader>
-                <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
-                  <div className="space-y-2">
-                    <Badge className="bg-purple-500/10 text-purple-500 hover:bg-purple-500/20">
-                      {project.type}
-                    </Badge>
-                    <CardTitle className="text-xl">{project.title}</CardTitle>
-                  </div>
-                  <div className="flex gap-2">
-                    <Button variant="ghost" size="icon" className="h-8 w-8">
-                      <Github className="h-4 w-4" />
-                    </Button>
-                    <Button variant="ghost" size="icon" className="h-8 w-8">
-                      <ExternalLink className="h-4 w-4" />
-                    </Button>
-                  </div>
-                </div>
-              </CardHeader>
-              <CardContent className="space-y-6">
-                <p className="text-muted-foreground text-justify md:text-left">
-                  {project.description}
+      <div className="space-y-4">
+        {projects.map((project) => (
+          <article
+            key={project.title}
+            className="group p-5 sm:p-6 rounded-lg border border-border/70 bg-card/40 hover:border-foreground/30 transition-colors space-y-4"
+          >
+            <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-2">
+              <div className="space-y-1">
+                <h3 className="text-base sm:text-lg font-semibold text-foreground">
+                  {project.title}
+                </h3>
+                <p className="font-mono text-xs text-muted-foreground">
+                  {project.client}
                 </p>
+              </div>
 
-                <div className="grid grid-cols-2 gap-2">
-                  {project.highlights.map((h) => (
-                    <div
-                      key={h}
-                      className="flex items-center gap-2 text-sm text-muted-foreground"
+              <div className="flex items-center gap-2">
+                {project.externalLink && (
+                  <Button
+                    asChild
+                    variant="outline"
+                    size="sm"
+                    className="h-8 px-2.5 font-mono text-xs"
+                  >
+                    <a
+                      href={project.externalLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
-                      <div className="h-1.5 w-1.5 rounded-full bg-purple-500" />
-                      {h}
-                    </div>
-                  ))}
-                </div>
+                      <Globe className="size-3.5 mr-1.5" />
+                      Live Site
+                      <ArrowUpRight className="size-3 ml-1 opacity-70" />
+                    </a>
+                  </Button>
+                )}
+                {project.githubLink && (
+                  <Button
+                    asChild
+                    variant="outline"
+                    size="sm"
+                    className="h-8 px-2.5 font-mono text-xs"
+                  >
+                    <a
+                      href={project.githubLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Github className="size-3.5 mr-1.5" />
+                      Code
+                      <ArrowUpRight className="size-3 ml-1 opacity-70" />
+                    </a>
+                  </Button>
+                )}
+              </div>
+            </div>
 
-                <div className="flex flex-wrap gap-2 pt-2">
-                  {project.tech.map((t) => (
-                    <Badge key={t} variant="secondary">
-                      {t}
-                    </Badge>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
+            <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
+              {project.description}
+            </p>
+
+            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-1.5 text-xs text-muted-foreground">
+              {project.highlights.map((h) => (
+                <li key={h} className="flex items-center gap-2">
+                  <span className="size-1 rounded-full bg-foreground/40 shrink-0" />
+                  <span>{h}</span>
+                </li>
+              ))}
+            </ul>
+
+            <div className="flex flex-wrap gap-1.5 pt-1">
+              {project.tech.map((t) => (
+                <Badge
+                  key={t}
+                  variant="secondary"
+                  className="font-mono text-[11px] px-2 py-0.5 rounded border border-border/60 bg-muted/40 font-normal"
+                >
+                  {t}
+                </Badge>
+              ))}
+            </div>
+          </article>
+        ))}
       </div>
     </section>
   );

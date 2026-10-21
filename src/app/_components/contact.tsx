@@ -1,6 +1,6 @@
-import { Mail, MapPin, Phone } from "lucide-react";
+import { ArrowUpRight, Github, Mail, MapPin, Phone } from "lucide-react";
 
-const contactInfo = [
+const contactLinks = [
   {
     icon: Mail,
     label: "Email",
@@ -8,58 +8,67 @@ const contactInfo = [
     href: "mailto:dianronaldokereh@gmail.com",
   },
   {
-    icon: Phone,
-    label: "Phone",
-    value: "+62 896 1222 5233",
-    href: "tel:+6289612225233",
+    icon: Github,
+    label: "GitHub",
+    value: "github.com/kereh",
+    href: "https://github.com/kereh",
   },
   {
-    icon: MapPin,
-    label: "Location",
-    value: "Tomohon, Indonesia",
-    href: "#",
+    icon: Phone,
+    label: "Phone / WhatsApp",
+    value: "+62 896 1222 5233",
+    href: "tel:+6289612225233",
   },
 ];
 
 export function Contact() {
   return (
-    <section id="contact" className="py-24 px-6">
-      <div className="max-w-4xl mx-auto space-y-12">
-        <div className="text-center space-y-2">
-          <p className="text-sm font-medium text-purple-500 tracking-widest uppercase">
-            Get in Touch
-          </p>
-          <h2 className="text-3xl sm:text-4xl font-bold">Contact Me</h2>
-          <p className="text-muted-foreground max-w-xl mx-auto">
-            Have a project in mind or want to collaborate? Feel free to reach
-            out!
-          </p>
-        </div>
+    <section id="contact" className="space-y-6">
+      <div className="space-y-1">
+        <p className="font-mono text-xs text-muted-foreground uppercase tracking-wider">
+          05 / Contact
+        </p>
+        <h2 className="text-xl sm:text-2xl font-bold tracking-tight text-foreground">
+          Get in Touch
+        </h2>
+      </div>
 
-        <div className="space-y-6">
-          <h3 className="text-lg font-semibold text-center">
-            Contact Information
-          </h3>
-          <div className="grid sm:grid-cols-3 gap-4">
-            {contactInfo.map((info) => (
-              <a
-                key={info.label}
-                href={info.href}
-                className="flex flex-col items-center gap-3 p-6 rounded-xl bg-muted/50 hover:bg-muted transition-colors group text-center"
-              >
-                <div className="h-12 w-12 rounded-full bg-linear-to-r from-purple-500 to-blue-500 flex items-center justify-center">
-                  <info.icon className="h-5 w-5 text-white" />
-                </div>
-                <div>
-                  <p className="text-sm text-muted-foreground">{info.label}</p>
-                  <p className="font-medium group-hover:text-purple-500 transition-colors text-sm">
-                    {info.value}
-                  </p>
-                </div>
-              </a>
-            ))}
-          </div>
-        </div>
+      <p className="text-sm text-muted-foreground leading-relaxed max-w-xl">
+        Available for full-stack engineering contracts, freelance projects, and
+        technical consultations.
+      </p>
+
+      <div className="grid gap-3 sm:grid-cols-3">
+        {contactLinks.map((item) => (
+          <a
+            key={item.label}
+            href={item.href}
+            target={item.href.startsWith("http") ? "_blank" : undefined}
+            rel={
+              item.href.startsWith("http") ? "noopener noreferrer" : undefined
+            }
+            className="group p-4 rounded-lg border border-border/60 bg-card/40 hover:border-foreground/30 hover:bg-card/70 transition-all flex flex-col justify-between gap-3"
+          >
+            <div className="flex items-center justify-between text-muted-foreground group-hover:text-foreground transition-colors">
+              <item.icon className="size-4" />
+              <ArrowUpRight className="size-3.5 opacity-60 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
+            </div>
+
+            <div className="space-y-0.5">
+              <p className="font-mono text-xs text-muted-foreground">
+                {item.label}
+              </p>
+              <p className="text-xs sm:text-sm font-medium text-foreground truncate">
+                {item.value}
+              </p>
+            </div>
+          </a>
+        ))}
+      </div>
+
+      <div className="flex items-center gap-2 font-mono text-xs text-muted-foreground pt-2">
+        <MapPin className="size-3.5" />
+        <span>Based in Tomohon, North Sulawesi, Indonesia (UTC+8)</span>
       </div>
     </section>
   );

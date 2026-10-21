@@ -1,29 +1,26 @@
-/** biome-ignore-all lint/suspicious/noArrayIndexKey: biome ribet amat bjir */
-import { Briefcase, GraduationCap } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const workExperience = [
   {
     title: "Web Developer Intern",
     company: "KPU Kota Tomohon",
     location: "Sulawesi Utara",
-    period: "Oct 2025 - Dec 2025",
+    period: "Oct 2025 – Dec 2025",
     description: [
-      "Developed comprehensive employee performance website system, including performance management, online attendance, and allowance calculation modules",
-      "Designed and implemented monthly/yearly performance and attendance reports for streamlined evaluation",
-      "Ensured system accuracy and functionality to support transparency in personnel administration",
+      "Engineered full employee performance platform (e-Kinerja) covering evaluation metrics, online attendance logging, and automated performance allowance (Tukin) calculation.",
+      "Designed and implemented monthly and annual report generation for civil service evaluation.",
+      "Maintained data integrity, auditability, and role-based permissions across personnel records.",
     ],
-    tech: ["Next.js", "TypeScript", "PostgreSQL", "Drizzle ORM"],
+    tech: ["Next.js", "TypeScript", "PostgreSQL", "Drizzle ORM", "Better-Auth"],
   },
   {
     title: "Part-Time Developer",
     company: "SMK Dharma Bhakti Tomohon",
     location: "Sulawesi Utara",
-    period: "Apr 2025 - Jun 2025",
+    period: "Apr 2025 – Jun 2025",
     description: [
-      "Developed and implemented school profile website to enhance public image and information access",
-      "Collaborated with school stakeholders to translate content requirements into functional and aesthetic web solutions",
+      "Developed responsive institutional website to streamline communication with prospective students and parents.",
+      "Worked directly with school administration to organize curriculum, announcements, and program directories.",
     ],
     tech: ["Next.js", "TypeScript", "Tailwind CSS"],
   },
@@ -31,101 +28,105 @@ const workExperience = [
 
 const education = [
   {
-    degree: "Bachelor's Degree (S-1)",
+    degree: "Bachelor's Degree (S-1) in Informatics",
     school: "Universitas Sariputra Indonesia Tomohon",
-    major: "Informatics",
-    year: "2026",
+    period: "Expected 2026",
+    status: "In Progress",
   },
   {
-    degree: "Vocational High School",
+    degree: "Vocational High School – Computer & Network Engineering",
     school: "SMKS Kristen 2 Tomohon",
-    major: "Computer & Network Engineering",
-    year: "2022",
+    period: "Graduated 2022",
+    status: "Completed",
   },
 ];
 
 export function Experience() {
   return (
-    <section id="experience" className="py-24 px-6 bg-muted/30">
-      <div className="max-w-4xl mx-auto space-y-16">
-        <div className="text-center space-y-2">
-          <p className="text-sm font-medium text-purple-500 tracking-widest uppercase">
-            My Journey
-          </p>
-          <h2 className="text-3xl sm:text-4xl font-bold">
-            Experience & Education
-          </h2>
-        </div>
+    <section id="experience" className="space-y-8">
+      <div className="space-y-1">
+        <p className="font-mono text-xs text-muted-foreground uppercase tracking-wider">
+          02 / Experience
+        </p>
+        <h2 className="text-xl sm:text-2xl font-bold tracking-tight text-foreground">
+          Work & Education
+        </h2>
+      </div>
 
-        <div className="space-y-8">
-          <div className="flex items-center gap-3">
-            <Briefcase className="h-6 w-6 text-purple-500" />
-            <h3 className="text-xl font-semibold">Work Experience</h3>
-          </div>
+      <div className="space-y-8">
+        <div className="space-y-6">
+          <h3 className="font-mono text-xs uppercase tracking-wider text-muted-foreground border-b border-border/60 pb-2">
+            Professional Experience
+          </h3>
 
-          <div className="space-y-6">
-            {workExperience.map((job, index) => (
-              <Card
-                key={index}
-                className="border-l-4 border-l-purple-500 hover:shadow-lg transition-shadow"
-              >
-                <CardHeader>
-                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
-                    <div>
-                      <CardTitle className="text-lg">{job.title}</CardTitle>
-                      <p className="text-muted-foreground">
-                        {job.company} • {job.location}
-                      </p>
-                    </div>
-                    <Badge variant="secondary" className="w-fit">
-                      {job.period}
+          <div className="space-y-8">
+            {workExperience.map((job) => (
+              <div key={job.company} className="space-y-3">
+                <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1">
+                  <div>
+                    <h4 className="text-base font-semibold text-foreground">
+                      {job.title}
+                    </h4>
+                    <p className="text-sm text-muted-foreground">
+                      {job.company} · {job.location}
+                    </p>
+                  </div>
+                  <span className="font-mono text-xs text-muted-foreground shrink-0">
+                    {job.period}
+                  </span>
+                </div>
+
+                <ul className="space-y-1.5 text-xs sm:text-sm text-muted-foreground">
+                  {job.description.map((item) => (
+                    <li key={item} className="flex items-start gap-2">
+                      <span className="text-foreground/40 mt-1 select-none">
+                        ›
+                      </span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <div className="flex flex-wrap gap-1.5 pt-1">
+                  {job.tech.map((t) => (
+                    <Badge
+                      key={t}
+                      variant="secondary"
+                      className="font-mono text-[11px] px-2 py-0.5 rounded border border-border/60 bg-muted/40 font-normal"
+                    >
+                      {t}
                     </Badge>
-                  </div>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <ul className="space-y-2 text-sm text-muted-foreground">
-                    {job.description.map((item, i) => (
-                      <li key={i} className="flex gap-2">
-                        <span className="text-purple-500 mt-1">•</span>
-                        <span>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <div className="flex flex-wrap gap-2">
-                    {job.tech.map((t) => (
-                      <Badge key={t} variant="outline" className="text-xs">
-                        {t}
-                      </Badge>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
+                  ))}
+                </div>
+              </div>
             ))}
           </div>
         </div>
 
-        <div className="space-y-8">
-          <div className="flex items-center gap-3">
-            <GraduationCap className="h-6 w-6 text-blue-500" />
-            <h3 className="text-xl font-semibold">Education</h3>
-          </div>
+        <div className="space-y-4">
+          <h3 className="font-mono text-xs uppercase tracking-wider text-muted-foreground border-b border-border/60 pb-2">
+            Education
+          </h3>
 
-          <div className="grid sm:grid-cols-2 gap-6">
-            {education.map((edu, index) => (
-              <Card key={index} className="hover:shadow-lg transition-shadow">
-                <CardHeader>
-                  <CardTitle className="text-lg">{edu.degree}</CardTitle>
-                  <p className="text-muted-foreground">{edu.school}</p>
-                </CardHeader>
-                <CardContent>
-                  <div className="flex items-center justify-between">
-                    <span className="text-sm text-muted-foreground">
-                      {edu.major}
-                    </span>
-                    <Badge variant="secondary">{edu.year}</Badge>
-                  </div>
-                </CardContent>
-              </Card>
+          <div className="grid gap-3 sm:grid-cols-2">
+            {education.map((edu) => (
+              <div
+                key={edu.school}
+                className="p-4 rounded-lg border border-border/60 bg-card/40 space-y-2"
+              >
+                <div>
+                  <h4 className="text-sm font-semibold text-foreground">
+                    {edu.degree}
+                  </h4>
+                  <p className="text-xs text-muted-foreground">{edu.school}</p>
+                </div>
+                <div className="flex items-center justify-between font-mono text-[11px] text-muted-foreground pt-1">
+                  <span>{edu.period}</span>
+                  <span className="px-1.5 py-0.5 rounded bg-muted/60 text-foreground/80">
+                    {edu.status}
+                  </span>
+                </div>
+              </div>
             ))}
           </div>
         </div>
