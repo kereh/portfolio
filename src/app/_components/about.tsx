@@ -24,8 +24,8 @@ export function About() {
           attendance tracking, and institutional web portals.
         </p>
         <p>
-          Currently completing a Bachelor&apos;s degree in Informatics at
-          Universitas Sariputra Indonesia Tomohon (class of 2026).
+          Completed a Bachelor&apos;s degree (S-1) in Informatics at Universitas
+          Sariputra Indonesia Tomohon (graduated 2026).
         </p>
       </div>
     </section>

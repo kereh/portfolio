@@ -30,8 +30,8 @@ const education = [
   {
     degree: "Bachelor's Degree (S-1) in Informatics",
     school: "Universitas Sariputra Indonesia Tomohon",
-    period: "Expected 2026",
-    status: "In Progress",
+    period: "Graduated 2026",
+    status: "Completed",
   },
   {
     degree: "Vocational High School – Computer & Network Engineering",

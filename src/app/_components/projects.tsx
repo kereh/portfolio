@@ -19,19 +19,26 @@ const projects = [
     githubLink: null,
   },
   {
-    title: "School Profile & Portal",
-    client: "SMK Dharma Bhakti Tomohon · Education",
+    title: "UNSRIT Kinerja (Employee Performance System)",
+    client: "Universitas Sariputra Indonesia Tomohon · Higher Education",
     description:
-      "Institutional web application providing accessible program directories, student registration guidelines, and administrative announcements for school community members.",
-    tech: ["Next.js", "TypeScript", "Tailwind CSS"],
-    highlights: [
-      "Responsive accessibility",
-      "Structured curriculum directory",
-      "SEO & metadata optimization",
-      "Lightweight fast delivery",
+      "Production employee performance evaluation platform built for and actively used by Universitas Sariputra Indonesia Tomohon to assess faculty and staff, manage performance rubrics, and generate administrative reports.",
+    tech: [
+      "Next.js",
+      "TypeScript",
+      "PostgreSQL",
+      "Drizzle ORM",
+      "tRPC",
+      "Better-Auth",
     ],
-    externalLink: null,
-    githubLink: "https://github.com/kereh",
+    highlights: [
+      "Staff & faculty performance scoring",
+      "Behavioral rubric evaluation",
+      "Role-based permissions & audit logging",
+      "PDF & spreadsheet report generation",
+    ],
+    externalLink: "https://kinerja.unsrittomohon.ac.id/",
+    githubLink: null,
   },
 ];
 
